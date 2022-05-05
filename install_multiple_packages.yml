@@ -1,0 +1,9 @@
+--- 
+- name: My Test Plybook
+  hosts: webservers
+  become: true
+  tasks:
+  - name: Install multiple packages
+    yum:
+      name: ['git', 'make', 'mysql', 'gcc', 'docker', 'tree', 'wget', 'telnet']
+      state: installed
